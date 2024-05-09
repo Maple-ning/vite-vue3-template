@@ -5,18 +5,7 @@ const routes = [
   },
   {
     path: "/home",
-    component: () => import("@/pages/home.vue"),
-    redirect: "/home/user",
-    children: [
-      {
-        path: "/home/user",
-        component: () => import("@/pages/home.vue"),
-      },
-      {
-        path: "/home/manage",
-        component: () => import("@/pages/home.vue"),
-      }
-    ]
+    component: () => import("@/pages/home/index.vue"),
   },
   {
     path: "/:pathMatch(.*)*",

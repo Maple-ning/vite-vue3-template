@@ -6,13 +6,13 @@ const router = createRouter({
   routes,
 });
 
+// 路由守卫：登录校验
 router.beforeEach((to, from) => {
   if (to.path === '/login') {
-    //在登录页做清除操作，如清除token等
+    // 回到登录页，清空登录认证
+    localStorage.removeItem('token')
   }
-
   if (!localStorage.getItem('token') && to.path !== '/login') {
-    // 未登陆且访问的不是登录页，重定向到登录页面
     return '/login';
   }
 });
