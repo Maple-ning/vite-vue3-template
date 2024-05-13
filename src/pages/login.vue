@@ -4,18 +4,18 @@
       <div class="exhibition-selection"></div>
       <div class="operate-selection">
         <el-form :model="form" label-width="auto" class="operate-form">
-          <h1>管理系统</h1>
+          <h1>Space Web</h1>
           <el-form-item>
-            <el-input v-model="form.username" placeholder="用户名"/>
+            <el-input v-model="form.username" placeholder="Username" />
           </el-form-item>
           <el-form-item>
-            <el-input v-model="form.password" placeholder="密码"/>
+            <el-input v-model="form.password" placeholder="Password" />
           </el-form-item>
           <el-form-item>
-            <el-button link>忘记密码</el-button>
+            <el-button link>Forgot Password</el-button>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="goToHome">登录</el-button>
+            <el-button type="primary" @click="goToHome">Login</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -29,7 +29,7 @@ import { reactive } from 'vue'
 
 const form = reactive({
   username: '',
-  password: '',
+  password: ''
 })
 
 const router = useRouter()
@@ -43,31 +43,35 @@ const goToHome = () => {
 
 <style scoped lang="scss">
 .login-page {
+  position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('@/assets/image/background1.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: rgb(27, 34, 122);
   .login-box {
-    width: 800px;
-    height: 600px;
+    position: absolute;
+    width: 50vw;
+    height: 70vh;
+    background-color: rgb(59, 63, 69);
+    border: 3px solid #fff;
+    border-radius: 32px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    overflow: hidden;
   }
 
   .exhibition-selection {
-    flex: 4.5;
-    background-image: url('@/assets/image/lucky.png');
+    width: 60%;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    background-image: url('@/assets/image/space.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
   .operate-selection {
-    flex: 5.5;
+    width: 40%;
   }
 
   :deep(.operate-form) {
@@ -77,6 +81,7 @@ const goToHome = () => {
     h1 {
       margin-top: 70px;
       margin-bottom: 60px;
+      color: white;
     }
     .el-button--primary {
       width: 100%;
@@ -87,6 +92,9 @@ const goToHome = () => {
         height: 40px;
         line-height: 40px;
       }
+    }
+    .el-button.is-link {
+      color: white;
     }
   }
 }
