@@ -1,0 +1,53 @@
+// 全局CSS变量
+@import "./variables.css";
+// Mixins
+@import "./mixins.scss";
+// Element Plus
+@import "./element-plus.css";
+@import "./element-plus.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
+  @extend %scrollbar;
+}
+
+#app {
+  height: 100%;
+}
+
+.app-wrapper {
+  height: 100%;
+}
+
+.page-root {
+  max-width: var(--test-page-parent-width);
+  background-color: var(--test-page-parent-bg);
+  padding: 20px;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}

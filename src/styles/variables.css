@@ -1,0 +1,16 @@
+/** 全局css变量 */
+
+:root {
+  /* Header区域 = Logo组件 + */
+  --test-header-height: 100px;
+  --test-logo-width: 300px;
+  --test-header-bg-color: var(--el-bg-color);
+  --test-header-box-shadow: var(--el-box-shadow-lighter);
+  --test-header-border-bottom: 1px solid var(--el-fill-color);
+  --test-logo-text-size: 30px;
+  --test-logo-text-color: #333;
+  --test-navigation-color: #333;
+  /* 页面公共 */
+  --test-page-parent-width: 1440px;
+  --test-page-parent-bg: white;
+}
