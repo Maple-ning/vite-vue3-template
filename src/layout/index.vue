@@ -68,5 +68,6 @@ $transition-time: 0.35s;
   transition: padding-left $transition-time;
   height: 100%;
   overflow: auto;
+  @extend %scrollbar;
 }
 </style>

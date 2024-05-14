@@ -9,7 +9,6 @@
 
 <style lang="scss" scoped>
 .home-page {
-  height: 100%;
   h1 {
     font-size: 100px;
     text-align: center;
