@@ -1,5 +1,5 @@
 <script setup lang='ts' name='layout'>
-import { AppMain, Logo, NavigationBar } from './components';
+import { AppMain, Logo, NavigationBar,Settings } from './components';
 </script>
 
 <template>
@@ -8,6 +8,7 @@ import { AppMain, Logo, NavigationBar } from './components';
       <div class="content">
         <Logo class="logo" />
         <NavigationBar class="navigation-bar"></NavigationBar>
+        <Settings class="settings"/>
       </div>
     </div>
     <!-- 主容器 -->
@@ -39,6 +40,7 @@ $transition-time: 0.35s;
   width: 100%;
 
   .content {
+    position: relative;
     padding: 0 50px;
     display: flex;
 
@@ -48,6 +50,11 @@ $transition-time: 0.35s;
 
     .navigation-bar {
       flex: 1;
+    }
+
+    .settings {
+      position: absolute;
+      right: 20px;
     }
   }
 }

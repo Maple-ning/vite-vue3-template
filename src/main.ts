@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import store from "./store"
 import router from "./router"
+import "@/router/permission"
 // css
 import "@/styles/index.scss"
 import "element-plus/dist/index.css"

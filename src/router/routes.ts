@@ -1,4 +1,6 @@
-const routes = [
+import { type RouteRecordRaw } from "vue-router"
+
+const routes:RouteRecordRaw[] = [
   {
     path: "/login",
     component: () => import("@/pages/login.vue"), //路由懒加载
@@ -14,6 +16,30 @@ const routes = [
         name: "Home",
         meta: {
           title: "首页"
+        }
+      },
+      {
+        path: "about",
+        component: () => import("@/pages/about/index.vue"),
+        name: "About",
+        meta: {
+          title: "关于"
+        }
+      },
+      {
+        path: "contacts",
+        component: () => import("@/pages/contacts/index.vue"),
+        name: "Contacts",
+        meta: {
+          title: "联系"
+        }
+      },
+      {
+        path: "support",
+        component: () => import("@/pages/support/index.vue"),
+        name: "Support",
+        meta: {
+          title: "支持"
         }
       }
     ]
